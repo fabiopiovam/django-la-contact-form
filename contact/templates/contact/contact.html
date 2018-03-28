@@ -1,5 +1,7 @@
+{% extends "base.html" %}
 {% load staticfiles %}
 
+{% block content %}
 <form name="form-contact" id="form-contact" action="" method="post" accept-charset="utf-8">
     {% if mail_sent == True %}
     <p class='mail-message mail-success'>Mensagem enviada com sucesso!<br/>Em breve entraremos em contato.</p>
@@ -15,3 +17,4 @@
 </form>
 
 <script src="{% static 'contact/js/contact_form.js' %}" type="text/javascript" charset="utf-8"></script>
+{% endblock %}
